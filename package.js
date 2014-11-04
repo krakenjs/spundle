@@ -5,8 +5,18 @@ var async = require('async');
 var path = require('path');
 var glob = require('glob');
 
+var nopt = require('nopt');
+
+var conf = nopt({
+    "language": String,
+    "country": String
+}, {
+    "l": "--language",
+    "c": "--country"
+});
+
 var base = path.resolve('locales');
-glob(path.resolve(base, '*/*'), function (err, files) {
+glob(path.resolve(base, path.join(conf.country || '*', conf.language || '*')), function (err, files) {
     if (err) {
         throw err;
     }
