@@ -3,8 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "package.js",
+  "bin": "cli.js",
   "author": "Aria Stewart <ariastewart@paypal.com>",
-  "license": "ISC",
+  "license": "Proprietary",
   "dependencies": {
     "async": "^0.9.0",
     "glob": "^4.0.6",
