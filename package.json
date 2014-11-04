@@ -1,6 +1,6 @@
 {
   "name": "pack-old-content",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "",
   "main": "package.js",
   "bin": "cli.js",
