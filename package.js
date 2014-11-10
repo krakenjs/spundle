@@ -7,11 +7,7 @@ var glob = require('glob');
 var iferr = require('iferr');
 
 module.exports = function (base, country, language, callback) {
-    glob(path.resolve(base, path.join(country, language)), function (err, files) {
-        if (err) {
-            throw err;
-        }
-
+    glob(path.resolve(base, path.join(country, language)), iferr(callback, function (files) {
         var out = {};
         async.eachSeries(files, function (ent, next) {
             gloob(ent, function (err, o) {
@@ -19,8 +15,8 @@ module.exports = function (base, country, language, callback) {
                 next();
             });
         }, iferr(callback, function () {
-            callback(err, out);
+            callback(null, out);
         }));
 
-    });
+    }));
 };
