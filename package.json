@@ -1,6 +1,6 @@
 {
   "name": "spundle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Load string content resources for packaging or use",
   "main": "package.js",
   "bin": "cli.js",
