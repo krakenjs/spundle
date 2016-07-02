@@ -15,7 +15,7 @@ module.exports = function (base, country, language, callback) {
         var out = {};
         async.eachSeries(files, function (ent, next) {
             findAllBundlesFromRoot(ent, function (err, o) {
-                out[path.relative(base, ent).replace(/(.*)\/(.*)/, "$2-$1")] = o;
+                out[path.relative(base, ent).replace(new RegExp('(.*)\\' + path.sep + '(.*)'), "$2-$1")] = o;
                 next();
             });
         }, iferr(callback, function () {
