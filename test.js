@@ -9,6 +9,8 @@ test('does it make a bundle?!', function (t) {
         t.error(err);
         t.ok(result);
         t.ok(result['en-US']);
+        t.equal(result['en-US']['world.properties'].world, 'World', 'found translation');
+        t.equal(result['en-US']['nested/world.properties'].world, 'World', 'found nested translation');
         t.notOk(result['es-AR']);
         t.end();
     });
