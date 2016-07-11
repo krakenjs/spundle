@@ -1,6 +1,6 @@
 {
   "name": "spundle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Load string content resources for packaging or use",
   "bin": "cli.js",
   "author": "Aria Stewart <ariastewart@paypal.com>",
