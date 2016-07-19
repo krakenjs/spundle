@@ -8,7 +8,7 @@ This is a low-level library used in build tools to get an easy-to-transport pre-
 Use
 ---
 
-```
+```javascript
 var spundle = require('spundle');
 spundle(appRoot, '*', '*', callback); // Load all content for all countries and languages
 spundle(appRoot, 'US', 'en', callback); // Load content for en-US only
